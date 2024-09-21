@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+    font-family: 'Custom', 'Open Sans', sans-serif;
+    background-color: var(--color-background);
+    /* color: var(--color-text); */
+}
