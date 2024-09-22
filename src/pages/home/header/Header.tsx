@@ -1,6 +1,30 @@
 import './Header.css';
+import { ListItem } from './listItem/ListItem';
 
-export function Header() {
+interface HeaderProps{
+    current:String | null;
+}
+interface NavLinks {
+    name: string;
+    link: string;
+}
+export function Header({ current } : HeaderProps) {
+
+    const navLinks:Array<NavLinks> = [
+        {
+            name: "About",
+            link: "#about"
+        },
+        {
+            name: "experience",
+            link: "#experience"
+        },
+        {
+            name: "projects",
+            link: "#projects"
+        }
+    ];
+
     return (
         <header className="lg:h-screen lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 py-10">
             <div>
@@ -10,24 +34,14 @@ export function Header() {
                 
                 <nav className='my-10 nav hidden lg:block'>
                     <ul className="">
-                        <li className="group">
-                            <a href="#" className="flex items-center gap-4 py-3">
-                                <span className='transition-all border-text border-b w-16 h-min'></span>
-                                <span className='uppercase text-xs font-semibold text-text'>About</span>
-                            </a>
-                        </li>
-                        <li className="group">
-                            <a href="#" className="flex items-center gap-4 py-3">
-                                <span className='transition-all border-textBackground border-b w-8 h-min group-hover:w-16 group-hover:border-text'></span>
-                                <span className='uppercase text-xs font-semibold text-textBackground group-hover:text-text'>Experience</span>
-                            </a>
-                        </li>
-                        <li className="group">
-                            <a href="#" className="flex items-center gap-4 py-3">
-                                <span className='transition-all border-textBackground border-b w-8 h-min group-hover:w-16 group-hover:border-text'></span>
-                                <span className='uppercase text-xs font-semibold text-textBackground group-hover:text-text'>Projects</span>
-                            </a>
-                        </li>
+                        {navLinks.map((el, i) => (
+                            <ListItem
+                                active={(el.link.substring(1) == current)} // Escape the # of the link for the compareson
+                                name={el.name}
+                                link={el.link}
+                                key={i}
+                            />
+                        ))}
                     </ul>
                 </nav>
             </div>
