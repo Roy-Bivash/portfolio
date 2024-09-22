@@ -1,6 +1,7 @@
 import { ExperienceCardList } from "@/components/experienceCardList/ExperienceCard";
 import { ExperienceCard } from "@/components/experienceCard/ExperienceCard";
-
+import { ProjectCardList } from "@/components/projectCardList/ProjectCardList";
+import { ProjectCard } from "@/components/projectCard/ProjectCard";
 
 export function Main(){
     return (
@@ -44,7 +45,7 @@ export function Main(){
                         date="2019 - 2020"
                         title="Software Engineer at Example Company"
                         description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
-                        tags={["React", "Node.js", "JavaScript"]}
+                        
                     />
                 </ExperienceCardList>
                 <div className="mt-6">
@@ -64,13 +65,23 @@ export function Main(){
                 <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                     <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
                 </div>
-                <div className="space-y-5">
-
-                    
-                </div>
+                <ProjectCardList>
+                    <ProjectCard
+                        img="https://randompicturegenerator.com/img/cat-generator/gd289075a1c87a119496d8238bd50090bdb1e5c0d58db00f62ffa1b445aeeaa78424d38a473da6018ae4ab94fcab66d1f_640.jpg"
+                        title="Software Engineer at Example Company"
+                        href="https://www.examplecompany.com"
+                        description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
+                        tags={["React", "Node.js", "JavaScript"]}
+                    />
+                    <ProjectCard
+                        img="https://randompicturegenerator.com/img/cat-generator/ga66c1874a1157afff5e0f4929f258841d987b032cb591f5f1f99c33de7d556c8c1738e7d7741da933787e434de36fe56_640.jpg"
+                        title="Software Engineer at Example Company"
+                        href="https://www.examplecompany.com"
+                        description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
+                        tags={["React", "Node.js", "JavaScript"]}
+                    />
+                </ProjectCardList>
             </section>
-            
-
         </main>
     )
 }

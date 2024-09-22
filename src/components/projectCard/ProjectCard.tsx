@@ -1,19 +1,20 @@
 import { Tag } from "../tag/Tag";
 
-interface ExperienceCardProps {
-  date: string;
+interface ProjectCardProps {
+  img: string;
   title: string;
   href?: string;
   description: string;
-  tags?: Array<string>;
+  tags: Array<string>;
 }
 
 
-export function ExperienceCard({ date, title, href = "#", description, tags = [] }: ExperienceCardProps) {
+export function ProjectCard({ img, title, href = "#", description, tags }: ProjectCardProps) {
     return (
         <a href={href} className="group/card transition flex flex-col md:flex-row rounded md:hover:bg-slate-800/50 md:p-4 gap-2 md:hover:shadow-lg lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <div className="md:w-1/4 mb-1">
-                <p className="text-textDescription text-xs font-semibold uppercase tracking-widest">{ date }</p>
+                {/* <p className="text-textDescription text-xs font-semibold uppercase tracking-widest">{ date }</p> */}
+                <img src={img} alt="project-image" className="border-2 border-slate-200/10 transition group-hover/card:border-slate-200/30 w-1/2 md:w-full" />
             </div>
             <div className="md:w-3/4">
                 <h4 className="transition group-hover/card:text-teal-300 text-text font-medium flex items-end gap-1">
