@@ -1,3 +1,4 @@
+import { ExperienceCardList } from "@/components/experienceCardList/ExperienceCard";
 import { ExperienceCard } from "@/components/experienceCard/ExperienceCard";
 
 
@@ -24,7 +25,7 @@ export function Main(){
                 <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                     <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
                 </div>
-                <div className="space-y-5">
+                <ExperienceCardList>
                     <ExperienceCard 
                         date="2023 - Present"
                         title="Software Engineer at Example Company"
@@ -42,13 +43,21 @@ export function Main(){
                     <ExperienceCard 
                         date="2019 - 2020"
                         title="Software Engineer at Example Company"
-                        href="https://www.examplecompany.com"
                         description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
                         tags={["React", "Node.js", "JavaScript"]}
                     />
-                </div>
+                </ExperienceCardList>
                 <div className="mt-6">
-                    <a href="#" className="transition text-text font-normal tracking-wide hover:text-teal-300">View Full Résumé</a>
+                    <a href="#" className="transition group text-text font-normal tracking-wide hover:text-teal-300 flex items-end gap-1">
+                        <span>View Full Résumé</span>
+                        <svg className="transition h-4 w-4 mb-1 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </a>
                 </div>
             </section>
             <section id="projects">
