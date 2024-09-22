@@ -8,23 +8,29 @@ interface NavLinks {
     name: string;
     link: string;
 }
+
+const navLinks:Array<NavLinks> = [
+    {
+        name: "About",
+        link: "#about"
+    },
+    {
+        name: "experience",
+        link: "#experience"
+    },
+    {
+        name: "projects",
+        link: "#projects"
+    }
+];
+
+const socialMedia = {
+    email:"",
+    github: "",
+    linkedin: "",
+};
+
 export function Header({ current } : HeaderProps) {
-
-    const navLinks:Array<NavLinks> = [
-        {
-            name: "About",
-            link: "#about"
-        },
-        {
-            name: "experience",
-            link: "#experience"
-        },
-        {
-            name: "projects",
-            link: "#projects"
-        }
-    ];
-
     return (
         <header className="lg:h-screen lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 py-10">
             <div>

@@ -3,6 +3,41 @@ import { ExperienceCard } from "@/components/experienceCard/ExperienceCard";
 import { ProjectCardList } from "@/components/projectCardList/ProjectCardList";
 import { ProjectCard } from "@/components/projectCard/ProjectCard";
 
+interface Experience {
+    date: string;
+    title: string;
+    href?: string;
+    description: string;
+    tags?: Array<string>;
+};
+interface Project {
+    img: string;
+    title: string;
+    href?: string;
+    description: string;
+    tags: Array<string>;
+}
+
+const experienceList:Array<Experience> = [
+    {
+        date: "",
+        title: "",
+        href: "",
+        description: "",
+        tags: [""],
+    }
+];
+
+const projectList:Array<Project> = [
+    {
+        img: "",
+        title: "",
+        href: "",
+        description: "",
+        tags: [""],
+    }
+]
+
 export function Main(){
     return (
         <main className="lg:py-24 py-10 lg:w-1/2 space-y-24">
