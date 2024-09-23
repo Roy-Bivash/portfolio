@@ -6,26 +6,42 @@ import { ProjectCard } from "@/components/projectCard/ProjectCard";
 interface Experience {
     date: string;
     title: string;
-    href?: string;
+    href: string;
     description: string;
-    tags?: Array<string>;
+    tags: Array<string>;
 };
 interface Project {
     img: string;
     title: string;
-    href?: string;
+    href: string;
     description: string;
     tags: Array<string>;
 }
 
 const experienceList:Array<Experience> = [
     {
-        date: "",
-        title: "",
-        href: "",
-        description: "",
-        tags: [""],
-    }
+        date: "2023 - Present",
+        title: "Full stack developer apprenticeship at Public Finance",
+        href: "#",
+        description: "Designed, developed, presented, and maintained a Project Management Dashboard application in collaboration with a team.",
+        tags: ["Vue.js", "Java Spring", "PostgreSQL", "TypeScript", "HTML", "CSS"],
+    },
+    {
+        date: "2022 - 2023",
+        title: "Full stack developer apprenticeship at Public Finance for 1 year",
+        href: "#",
+        description: "Configured and managed a Rocky Linux server for PHP applications with PostgreSQL, developed server admin tools, and migrated applications from PHP 5 to PHP 8.",
+        tags: ["PHP", "PostgreSQL", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
+    },
+    {
+        date: "May 2021",
+        title: "Designed and implemented a web application facilitating rapid note sharing among office staff members.",
+        href: "#",
+        description: "Configured and managed a Rocky Linux server for PHP applications with PostgreSQL, developed server admin tools, and migrated applications from PHP 5 to PHP 8.",
+        tags: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+    },
+    
+    
 ];
 
 const projectList:Array<Project> = [
@@ -62,26 +78,15 @@ export function Main(){
                     <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
                 </div>
                 <ExperienceCardList>
-                    <ExperienceCard 
-                        date="2023 - Present"
-                        title="Software Engineer at Example Company"
-                        href="https://www.examplecompany.com"
-                        description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
-                        tags={["React", "Node.js", "JavaScript","React", "Node.js", "JavaScript","React", "Node.js", "JavaScript"]}
-                    />
-                    <ExperienceCard 
-                        date="2020 - 2023"
-                        title="Software Engineer at Example Company"
-                        href="https://www.examplecompany.com"
-                        description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
-                        tags={["React", "Node.js", "JavaScript"]}
-                    />
-                    <ExperienceCard 
-                        date="2019 - 2020"
-                        title="Software Engineer at Example Company"
-                        description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
-                        
-                    />
+                    {experienceList.map((el, i) => (
+                        <ExperienceCard 
+                            date={el.date}
+                            title={el.title}
+                            href={el.href}
+                            description={el.description}
+                            tags={el.tags}
+                        />
+                    ))}
                 </ExperienceCardList>
                 <div className="mt-6">
                     <a href="#" className="transition group text-text font-normal tracking-wide hover:text-teal-300 flex items-end gap-1">
