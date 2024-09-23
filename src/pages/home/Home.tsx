@@ -11,7 +11,7 @@ export default function Home() {
                 entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     setCurrentSectionId(entry.target.id);
-                    console.log(entry.target.id)
+                    // console.log(entry.target.id)
                 }
                 });
             },

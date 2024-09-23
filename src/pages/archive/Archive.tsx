@@ -18,7 +18,7 @@ const archiveList:Array<ArchiveInterface> = [
         project: "Pulsar : Run the Microsoft Phi models locally on your machine",
         tags: ["python", "Vue.js", "TypeScript", "CSS", "Docker"],
         link: {
-            display: "github.com/Roy-Bivash/pulsar",
+            display: "Github",
             href: "https://github.com/Roy-Bivash/pulsar",
             target: "_blank",
         },
@@ -28,8 +28,18 @@ const archiveList:Array<ArchiveInterface> = [
         project: "Brightness : Adjust the the brightness in linux.",
         tags: ["Rust", "React", "Tauri", "Typescript"],
         link: {
-            display: "github.com/Roy-Bivash/Brightness",
+            display: "Github",
             href: "https://github.com/Roy-Bivash/Brightness",
+            target: "_blank",
+        },
+    },
+    {
+        year: "2024",
+        project: "Rent A Bike : School project",
+        tags: ["React", "NestJS", "MySQL"],
+        link: {
+            display: "Github",
+            href: "https://github.com/Roy-Bivash/rentabike",
             target: "_blank",
         },
     },
@@ -38,15 +48,40 @@ const archiveList:Array<ArchiveInterface> = [
         project: "Aim Trainer",
         tags: ["HTML", "CSS", "JavaScript", "Pixi.js"],
         link: {
-            display: "github.com/Roy-Bivash/aim-trainer",
+            display: "Github",
             href: "https://github.com/Roy-Bivash/aim-trainer",
             target: "_blank",
         },
     },
     {
+        year: "2023",
+        project: "TIC TAC TOE",
+        tags: ["JavaScript"],
+        link: {
+            display: "TIC TAC TOE",
+            href: "https://rbivash.com/js-morpion/",
+            target: "_blank"
+        }
+    },
+    {
+        year: "2022",
+        project: "Windows Dashboard",
+        tags: ["C#", ".NET Framework"],
+    },
+    {
         year: "2021",
         project: "Billing application",
         tags: ["PHP", "MySQL", "Bootstrap", "Javascript"],
+    },
+    {
+        year: "2021",
+        project: "NASA Rover Images",
+        tags: ["NASA API", "JavaScript", "Bootstrap"],
+        link: {
+            display: "NASA Image",
+            href: "https://rbivash.com/nasa2/",
+            target: "_blank"
+        }
     },
 ];
 
