@@ -3,6 +3,7 @@ import { Tag } from "@/components/tag/Tag";
 interface Link {
     display: string;
     href:string;
+    target: "_self" | "_blank";
 }
 interface ArchiveInterface {
     year: string;
@@ -18,8 +19,9 @@ const archiveList:Array<ArchiveInterface> = [
         tags: ["python", "Vue.js", "TypeScript", "CSS", "Docker"],
         link: {
             display: "github.com/Roy-Bivash/pulsar",
-            href: "https://github.com/Roy-Bivash/pulsar"
-        }
+            href: "https://github.com/Roy-Bivash/pulsar",
+            target: "_blank",
+        },
     },
     {
         year: "2024",
@@ -27,8 +29,9 @@ const archiveList:Array<ArchiveInterface> = [
         tags: ["Rust", "React", "Tauri", "Typescript"],
         link: {
             display: "github.com/Roy-Bivash/Brightness",
-            href: "https://github.com/Roy-Bivash/Brightness"
-        }
+            href: "https://github.com/Roy-Bivash/Brightness",
+            target: "_blank",
+        },
     },
     {
         year: "2023",
@@ -36,9 +39,15 @@ const archiveList:Array<ArchiveInterface> = [
         tags: ["HTML", "CSS", "JavaScript", "Pixi.js"],
         link: {
             display: "github.com/Roy-Bivash/aim-trainer",
-            href: "https://github.com/Roy-Bivash/aim-trainer"
-        }
-    }
+            href: "https://github.com/Roy-Bivash/aim-trainer",
+            target: "_blank",
+        },
+    },
+    {
+        year: "2021",
+        project: "Billing application",
+        tags: ["PHP", "MySQL", "Bootstrap", "Javascript"],
+    },
 ];
 
 
@@ -77,17 +86,19 @@ export default function Archive(){
                             <td className="py-4 pr-4 align-top font-normal leading-snug text-text">
                                 <span className="hidden md:block">{el.project}</span>
                                 <div className="md:hidden">
-                                    <a href={el.link?.href} target="_blank" className="flex items-end gap-1">
+                                    <a href={el.link?.href} target={el.link?.target} className="flex items-end gap-1">
                                         <span>{el.project}</span>
-                                        <span>
-                                            <svg className="h-4 w-4 mb-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                                                <g id="SVGRepo_iconCarrier">
-                                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                </g>
-                                            </svg>
-                                        </span>
+                                        {el.link && (
+                                            <span>
+                                                <svg className="h-4 w-4 mb-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                                    <g id="SVGRepo_iconCarrier">
+                                                        <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        )}
                                     </a>
                                 </div>
                             </td>
@@ -100,7 +111,7 @@ export default function Archive(){
                             </td>
                             <td className="py-4 pl-4 align-top hidden md:table-cell">
                                 {el.link && (
-                                    <a href={el.link.href} target="_blank" className="group text-sm font-normal leading-tight text-textDescription hover:text-teal-300 flex items-end gap-1">
+                                    <a href={el.link.href} target={el.link.target} className="group text-sm font-normal leading-tight text-textDescription hover:text-teal-300 flex items-end gap-1">
                                         <span>{el.link.display}</span>
                                         <span>
                                             <svg className="transition h-4 w-4 mb-1 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

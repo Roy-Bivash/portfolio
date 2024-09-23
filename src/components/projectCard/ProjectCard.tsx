@@ -6,12 +6,13 @@ interface ProjectCardProps {
   href?: string;
   description: string;
   tags: Array<string>;
+  target: "_self" | "_blank";
 }
 
 
-export function ProjectCard({ img, title, href = "#", description, tags }: ProjectCardProps) {
+export function ProjectCard({ img, title, href = "#", description, tags, target }: ProjectCardProps) {
     return (
-        <a href={href} className="group/card transition flex flex-col md:flex-row rounded md:hover:bg-slate-800/50 md:p-4 gap-3 md:hover:shadow-lg lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+        <a href={href} target={target} className="group/card transition flex flex-col md:flex-row rounded md:hover:bg-slate-800/50 md:p-4 gap-3 md:hover:shadow-lg lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <div className="md:w-1/4 mb-1">
                 {/* <p className="text-textDescription text-xs font-semibold uppercase tracking-widest">{ date }</p> */}
                 <img src={img} alt="project-image" className="border-2 border-slate-200/10 transition group-hover/card:border-slate-200/30 w-1/2 md:w-full lg:max-h-24 object-cover" />

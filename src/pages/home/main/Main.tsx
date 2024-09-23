@@ -20,6 +20,7 @@ interface Project {
     href: string;
     description: string;
     tags: Array<string>;
+    target: "_self" | "_blank";
 }
 
 const experienceList:Array<Experience> = [
@@ -55,6 +56,7 @@ const projectList:Array<Project> = [
         href: "https://github.com/Roy-Bivash/pulsar",
         description: "Run the Microsoft Phi models locally on your machine",
         tags: ["python", "Vue.js", "TypeScript", "CSS", "Docker"],
+        target: "_blank",
     },
     {
         img: imgProject2,
@@ -62,6 +64,7 @@ const projectList:Array<Project> = [
         href: "https://github.com/Roy-Bivash/Brightness",
         description: "Adjust the the brightness of individual monitors in linux.",
         tags: ["Rust", "React", "Tauri", "Typescript"],
+        target: "_blank",
     },
     {
         img: imgProject3,
@@ -69,6 +72,7 @@ const projectList:Array<Project> = [
         href: "https://github.com/Roy-Bivash/aim-trainer",
         description: "A simple aim trainer using the pixi.js library",
         tags: ["HTML", "CSS", "JavaScript", "Pixi.js"],
+        target: "_blank",
     }, 
 ];
 
@@ -133,6 +137,7 @@ export function Main(){
                             href={el.href}
                             description={el.description}
                             tags={el.tags}
+                            target={el.target}
                         />
                     ))}
                 </ProjectCardList>
