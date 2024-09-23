@@ -65,7 +65,7 @@ export default function Archive(){
                         <th className="py-4 pr-8 text-sm font-semibold text-text">Year</th>
                         <th className="py-4 pr-8 text-sm font-semibold text-text">Project</th>
                         <th className="hidden py-4 pr-8 text-sm font-semibold text-text lg:table-cell">Built with</th>
-                        <th className="hidden py-4 pr-8 text-sm font-semibold text-text md:table-cell">Link</th>
+                        <th className="hidden py-4 pr-8 pl-4 text-sm font-semibold text-text md:table-cell">Link</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,15 +77,17 @@ export default function Archive(){
                             <td className="py-4 pr-4 align-top font-normal leading-snug text-text">
                                 <span className="hidden md:block">{el.project}</span>
                                 <div className="md:hidden">
-                                    <a href={el.link?.href} className="flex items-end gap-1">
+                                    <a href={el.link?.href} target="_blank" className="flex items-end gap-1">
                                         <span>{el.project}</span>
-                                        <svg className="transition h-4 w-4 mb-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-                                            </g>
-                                        </svg>
+                                        <span>
+                                            <svg className="h-4 w-4 mb-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
                                     </a>
                                 </div>
                             </td>
@@ -96,17 +98,19 @@ export default function Archive(){
                                     ))}
                                 </ul>
                             </td>
-                            <td className="py-4 pr-4 align-top hidden md:table-cell">
+                            <td className="py-4 pl-4 align-top hidden md:table-cell">
                                 {el.link && (
-                                    <a href={el.link.href} className="group text-sm font-normal leading-tight text-textDescription hover:text-teal-300 flex items-end gap-1">
+                                    <a href={el.link.href} target="_blank" className="group text-sm font-normal leading-tight text-textDescription hover:text-teal-300 flex items-end gap-1">
                                         <span>{el.link.display}</span>
-                                        <svg className="transition h-4 w-4 mb-1 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-                                            </g>
-                                        </svg>
+                                        <span>
+                                            <svg className="transition h-4 w-4 mb-1 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
                                     </a>
                                 )}
                             </td>
