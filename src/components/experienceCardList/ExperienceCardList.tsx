@@ -5,7 +5,7 @@ interface ExperienceCardListProps{
 }
 export function ExperienceCardList({ children }: ExperienceCardListProps){
     return(
-        <div className="space-y-5 group/list">
+        <div className="lg:space-y-5 space-y-12 group/list">
             { children }
         </div>
     )

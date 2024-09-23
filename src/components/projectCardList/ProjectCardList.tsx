@@ -5,7 +5,7 @@ interface ProjectCardListProps{
 }
 export function ProjectCardList({ children }: ProjectCardListProps){
     return(
-        <div className="space-y-5 group/list">
+        <div className="lg:space-y-5 space-y-12 group/list">
             { children }
         </div>
     )

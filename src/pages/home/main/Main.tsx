@@ -1,7 +1,11 @@
-import { ExperienceCardList } from "@/components/experienceCardList/ExperienceCard";
+import { ExperienceCardList } from "@/components/experienceCardList/ExperienceCardList";
 import { ExperienceCard } from "@/components/experienceCard/ExperienceCard";
 import { ProjectCardList } from "@/components/projectCardList/ProjectCardList";
 import { ProjectCard } from "@/components/projectCard/ProjectCard";
+import imgProject1 from "@/assets/img/projects/chat.png";
+import imgProject2 from "@/assets/img/projects/brightness.png";
+import imgProject3 from "@/assets/img/projects/aim-trainer.png";
+
 
 interface Experience {
     date: string;
@@ -11,7 +15,7 @@ interface Experience {
     tags: Array<string>;
 };
 interface Project {
-    img: string;
+    img: any;
     title: string;
     href: string;
     description: string;
@@ -46,13 +50,27 @@ const experienceList:Array<Experience> = [
 
 const projectList:Array<Project> = [
     {
-        img: "",
-        title: "",
-        href: "",
-        description: "",
-        tags: [""],
-    }
-]
+        img: imgProject1,
+        title: "Pulsar",
+        href: "https://github.com/Roy-Bivash/pulsar",
+        description: "Run the Microsoft Phi models locally on your machine",
+        tags: ["python", "Vue.js", "TypeScript", "CSS", "Docker"],
+    },
+    {
+        img: imgProject2,
+        title: "Brightness",
+        href: "https://github.com/Roy-Bivash/Brightness",
+        description: "Adjust the the brightness of individual monitors in linux.",
+        tags: ["Rust", "React", "Tauri", "Typescript"],
+    },
+    {
+        img: imgProject3,
+        title: "Aim Trainer",
+        href: "https://github.com/Roy-Bivash/aim-trainer",
+        description: "A simple aim trainer using the pixi.js library",
+        tags: ["HTML", "CSS", "JavaScript", "Pixi.js"],
+    }, 
+];
 
 export function Main(){
     return (
@@ -80,6 +98,7 @@ export function Main(){
                 <ExperienceCardList>
                     {experienceList.map((el, i) => (
                         <ExperienceCard 
+                            key={i}
                             date={el.date}
                             title={el.title}
                             href={el.href}
@@ -106,20 +125,16 @@ export function Main(){
                     <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
                 </div>
                 <ProjectCardList>
-                    <ProjectCard
-                        img="https://randompicturegenerator.com/img/cat-generator/gd289075a1c87a119496d8238bd50090bdb1e5c0d58db00f62ffa1b445aeeaa78424d38a473da6018ae4ab94fcab66d1f_640.jpg"
-                        title="Software Engineer at Example Company"
-                        href="https://www.examplecompany.com"
-                        description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
-                        tags={["React", "Node.js", "JavaScript"]}
-                    />
-                    <ProjectCard
-                        img="https://randompicturegenerator.com/img/cat-generator/ga66c1874a1157afff5e0f4929f258841d987b032cb591f5f1f99c33de7d556c8c1738e7d7741da933787e434de36fe56_640.jpg"
-                        title="Software Engineer at Example Company"
-                        href="https://www.examplecompany.com"
-                        description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
-                        tags={["React", "Node.js", "JavaScript"]}
-                    />
+                    {projectList.map((el, i) => (
+                        <ProjectCard
+                            key={i}
+                            img={el.img}
+                            title={el.title}
+                            href={el.href}
+                            description={el.description}
+                            tags={el.tags}
+                        />
+                    ))}
                 </ProjectCardList>
             </section>
         </main>
