@@ -14,7 +14,7 @@ export function ProjectCard({ img, title, href = "#", description, tags, target 
     return (
         <a href={href} target={target} className="group/card transition flex flex-col md:flex-row rounded md:hover:bg-slate-800/50 md:p-4 gap-3 md:hover:shadow-lg lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <div className="md:w-1/4 mb-1">
-                <img src={img} alt="project-image" className="border-2 border-slate-200/10 transition group-hover/card:border-slate-200/30 w-1/2 md:w-full lg:max-h-24 object-cover" />
+                <img src={img} alt="project-image" className="border-2 border-slate-200/10 transition group-hover/card:border-slate-200/30 w-1/2 md:w-full lg:max-h-24 object-cover max-h-24" />
             </div>
             <div className="md:w-3/4">
                 <h4 className="transition group-hover/card:text-teal-300 text-text font-medium flex items-end gap-1">
