@@ -8,4 +8,15 @@ body {
     font-family: 'Custom', 'Open Sans', sans-serif;
     background-color: var(--color-background);
     /* color: var(--color-text); */
+
+    /* Add a patern to the background */
+    background-image: radial-gradient(#e6f1ff0e 1.4500000000000002px, var(--color-background) 1.4500000000000002px);
+    background-size: 29px 29px;
+}
+
+
+.test {
+    background: radial-gradient(600px at 500px 400px, rgba(30, 215, 160, 0.15), transparent 80%);
+    /* background: radial-gradient(600px at 500px 400px, rgba(29, 78, 216, 0.15), transparent 80%); */
+    
 }
