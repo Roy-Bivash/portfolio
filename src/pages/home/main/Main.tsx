@@ -154,6 +154,17 @@ export function Main(){
                     </a>
                 </div>
             </section>
+            <div className="text-textBackground">
+                <p>
+                    &copy; 2024 ROY Bivash. No rights reserved. Free to <a href="https://github.com/Roy-Bivash/portfolio" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">use and modify.</a> 
+                </p>
+                <p>
+                    Icons by <a href="https://www.svgrepo.com/" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">SVGRepo</a>
+                </p>
+                <p className="mt-2">
+                    Built with <a href="https://reactjs.org/" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">React</a> and <a href="https://tailwindcss.com/" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">TailwindCSS</a>.
+                </p>
+            </div>
         </main>
     )
 }
