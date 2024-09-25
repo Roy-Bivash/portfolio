@@ -77,6 +77,9 @@ const projectList:Array<Project> = [
 ];
 
 export function Main(){
+    // Year for the footer :
+    const currentYear = new Date().getFullYear();
+
     return (
         <main className="lg:py-24 py-10 lg:w-1/2 space-y-24">
             <section id="about">
@@ -156,7 +159,7 @@ export function Main(){
             </section>
             <div className="text-textBackground">
                 <p>
-                    &copy; 2024 ROY Bivash. No rights reserved. Free to <a href="https://github.com/Roy-Bivash/portfolio" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">use and modify.</a> 
+                    &copy; { currentYear } ROY Bivash. No rights reserved. Free to <a href="https://github.com/Roy-Bivash/portfolio" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">use and modify.</a> 
                 </p>
                 <p>
                     Icons by <a href="https://www.svgrepo.com/" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">SVGRepo</a>
