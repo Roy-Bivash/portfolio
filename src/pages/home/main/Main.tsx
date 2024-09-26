@@ -115,7 +115,7 @@ export function Main(){
                     ))}
                 </ExperienceCardList>
                 <div className="mt-6">
-                    <a href="./resume.pdf" className="transition group text-text font-normal tracking-wide hover:text-teal-300 flex items-end gap-1">
+                    <a href="./resume.pdf" className="transition group text-text font-normal tracking-wide hover:text-emerald-500 flex items-end gap-1">
                         <span>View Full Résumé</span>
                         <svg className="transition h-4 w-4 mb-1 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -145,7 +145,7 @@ export function Main(){
                     ))}
                 </ProjectCardList>
                 <div className="mt-6">
-                    <a href="./archive" className="transition group text-text font-normal tracking-wide hover:text-teal-300 flex items-end gap-1">
+                    <a href="./archive" className="transition group text-text font-normal tracking-wide hover:text-emerald-500 flex items-end gap-1">
                         <span>View Full Project Archive</span>
                         <svg className="transition h-4 w-4 mb-1 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -159,13 +159,13 @@ export function Main(){
             </section>
             <div className="text-textBackground">
                 <p>
-                    &copy; { currentYear } ROY Bivash. No rights reserved. Free to <a href="https://github.com/Roy-Bivash/portfolio" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">use and modify.</a> 
+                    &copy; { currentYear } ROY Bivash. No rights reserved. Free to <a href="https://github.com/Roy-Bivash/portfolio" target="_blank" className="transition text-textDescription hover:underline hover:text-emerald-500">use and modify.</a> 
                 </p>
                 <p>
-                    Icons by <a href="https://www.svgrepo.com/" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">SVGRepo</a>
+                    Icons by <a href="https://www.svgrepo.com/" target="_blank" className="transition text-textDescription hover:underline hover:text-emerald-500">SVGRepo</a>
                 </p>
                 <p className="mt-2">
-                    Built with <a href="https://reactjs.org/" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">React</a> and <a href="https://tailwindcss.com/" target="_blank" className="transition text-textDescription hover:underline hover:text-teal-300">TailwindCSS</a>.
+                    Built with <a href="https://reactjs.org/" target="_blank" className="transition text-textDescription hover:underline hover:text-emerald-500">React</a> and <a href="https://tailwindcss.com/" target="_blank" className="transition text-textDescription hover:underline hover:text-emerald-500">TailwindCSS</a>.
                 </p>
             </div>
         </main>

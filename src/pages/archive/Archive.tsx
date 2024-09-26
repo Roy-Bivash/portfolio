@@ -94,7 +94,7 @@ export default function Archive(){
             <LightEffect />
             <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-10">
                 <div className="mt-6 mb-2">
-                        <a href="/" className="transition group font-normal tracking-wide text-teal-300 flex items-center gap-1">
+                        <a href="/" className="transition group font-normal tracking-wide text-emerald-500 flex items-center gap-1">
                             <svg className="transition h-4 w-4 group-hover:-translate-x-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -150,7 +150,7 @@ export default function Archive(){
                                 </td>
                                 <td className="py-4 pl-4 align-top hidden md:table-cell">
                                     {el.link && (
-                                        <a href={el.link.href} target={el.link.target} className="group text-sm font-normal leading-tight text-textDescription hover:text-teal-300 flex items-end gap-1">
+                                        <a href={el.link.href} target={el.link.target} className="group text-sm font-normal leading-tight text-textDescription hover:text-emerald-500 flex items-end gap-1">
                                             <span>{el.link.display}</span>
                                             <span>
                                                 <svg className="transition h-4 w-4 mb-1 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
