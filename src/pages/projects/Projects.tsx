@@ -60,7 +60,7 @@ const archiveList:Array<ArchiveInterface> = [
         tags: ["JavaScript"],
         link: {
             display: "TIC TAC TOE",
-            href: "https://rbivash.com/js-morpion/",
+            href: "http://projects.rbivash.com/js-morpion/",
             target: "_blank"
         }
     },
@@ -80,7 +80,7 @@ const archiveList:Array<ArchiveInterface> = [
         tags: ["NASA API", "JavaScript", "Bootstrap"],
         link: {
             display: "NASA Image",
-            href: "https://rbivash.com/nasa2/",
+            href: "http://projects.rbivash.com/nasa2/",
             target: "_blank"
         }
     },
