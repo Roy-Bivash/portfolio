@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        text: 'var(--color-text)',
-        textDescription: 'var(--color-text-description)',
-        textBackground: 'var(--color-text-background)',
-        background: 'var(--color-background)',
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        accent: 'var(--color-accent)',
+        'primary-text': 'var(--color-primary-text)',
+        'secondary-text': 'var(--color-secondary-text)',
+        'background-text': 'var(--color-background-text)',
+        'background': 'var(--color-background)',
+        'accent-text': 'var(--color-accent-text)',
+        'accent-background': 'var(--color-accent-background)',
+        'secondary-background': 'var(--color-secondary-background)',
       },
     },
   },

@@ -1,7 +1,6 @@
 import { Tag } from "@/components/tag/Tag";
 import { LightEffect } from "@/components/lightEffect/LightEffect";
 
-
 interface Link {
     display: string;
     href:string;
@@ -87,42 +86,38 @@ const archiveList:Array<ArchiveInterface> = [
     },
 ];
 
-
-export default function Archive(){
+export function Projects(){
     return(
         <main className="relative">
             <LightEffect />
             <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-10">
                 <div className="mt-6 mb-2">
-                        <a href="/" className="transition group font-normal tracking-wide text-teal-300 flex items-center gap-1">
-                            <svg className="transition h-4 w-4 group-hover:-translate-x-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> 
-                                </g>
-                            </svg>
-                            <span>ROY BIvash</span>
-                        </a>
-                    </div>
-                <h1 className="text-text text-4xl sm:text-5xl font-bold tracking-wide">Projects</h1>
-
+                    <a href="/" className="transition group font-normal tracking-wide text-accent-text flex items-center gap-1">
+                        <svg className="transition h-4 w-4 group-hover:-translate-x-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> 
+                            </g>
+                        </svg>
+                        <span>ROY BIvash</span>
+                    </a>
+                </div>
+                <h1 className="text-primary-text text-4xl sm:text-5xl font-bold tracking-wide">Projects</h1>
                 <table className="mt-12 w-full border-collapse text-left">
-                    <thead className="sticky top-0 z-10 border-b border-slate-300/10 px-6 py-5 backdrop-blur">
+                    <thead className="sticky top-0 z-10 border-b border-secondary-background px-6 py-5 backdrop-blur">
                         <tr>
-                            <th className="py-4 pr-8 text-sm font-semibold text-text">Year</th>
-                            <th className="py-4 pr-8 text-sm font-semibold text-text">Project</th>
-                            <th className="hidden py-4 pr-8 text-sm font-semibold text-text lg:table-cell">Built with</th>
-                            <th className="hidden py-4 pr-8 pl-4 text-sm font-semibold text-text md:table-cell">Link</th>
+                            <th className="py-4 pr-8 text-sm font-semibold text-primary-text">Year</th>
+                            <th className="py-4 pr-8 text-sm font-semibold text-primary-text">Project</th>
+                            <th className="hidden py-4 pr-8 text-sm font-semibold text-primary-text lg:table-cell">Built with</th>
+                            <th className="hidden py-4 pr-8 pl-4 text-sm font-semibold text-primary-text md:table-cell">Link</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {archiveList.map((el, i) => (
-                            <tr key={i} className="border-b border-slate-300/10">
-                                <td className="text-textDescription">
+                    {archiveList.map((el, i) => (
+                            <tr key={i} className="border-b border-secondary-background">
+                                <td className="text-secondary-text">
                                     {el.year}
                                 </td>
-                                <td className="py-4 pr-4 align-top font-normal leading-snug text-text">
+                                <td className="py-4 pr-4 align-top font-normal leading-snug text-primary-text">
                                     <span className="hidden md:block">{el.project}</span>
                                     <div className="md:hidden">
                                         <a href={el.link?.href} target={el.link?.target} className="flex items-end gap-1">
@@ -150,7 +145,7 @@ export default function Archive(){
                                 </td>
                                 <td className="py-4 pl-4 align-top hidden md:table-cell">
                                     {el.link && (
-                                        <a href={el.link.href} target={el.link.target} className="group text-sm font-normal leading-tight text-textDescription hover:text-teal-300 flex items-end gap-1">
+                                        <a href={el.link.href} target={el.link.target} className="group text-sm font-normal leading-tight text-secondary-text hover:text-accent-text flex items-end gap-1">
                                             <span>{el.link.display}</span>
                                             <span>
                                                 <svg className="transition h-4 w-4 mb-1 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -172,3 +167,4 @@ export default function Archive(){
         </main>
     )
 }
+

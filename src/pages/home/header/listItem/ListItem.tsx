@@ -10,14 +10,14 @@ export function ListItem({ active, name, link } : ListItemProps){
             <a href={link} className="flex items-center gap-4 py-3">
                 <span className='
                     transition-all border-b h-min
-                    group-data-[current=false]:w-8 group-data-[current=false]:group-hover:w-16 group-data-[current=false]:group-hover:border-text group-data-[current=false]:border-textBackground 
-                    group-data-[current=true]:border-text group-data-[current=true]:w-16
+                    group-data-[current=false]:w-8 group-data-[current=false]:group-hover:w-16 group-data-[current=false]:group-hover:border-text group-data-[current=false]:border-background-text 
+                    group-data-[current=true]:border-primary-text group-data-[current=true]:w-16
                     '
                 ></span>
                 <span className='
                     uppercase text-xs font-semibold 
-                    group-data-[current=false]:text-textBackground group-data-[current=false]:group-hover:text-text
-                    group-data-[current=true]:text-text
+                    group-data-[current=false]:text-background-text group-data-[current=false]:group-hover:text-primary-text
+                    group-data-[current=true]:text-primary-text
                     '
                 >
                     { name }

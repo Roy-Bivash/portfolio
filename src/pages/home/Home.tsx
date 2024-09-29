@@ -1,10 +1,13 @@
-import { Header } from "@/pages/home/header/Header";
-import { Main } from "./main/Main";
 import { useEffect, useState } from "react";
-import { LightEffect } from "@/components/lightEffect/LightEffect";
-import Logo from "@/assets/logo/logo.png";
 
-export default function Home() {
+import { Header } from "./header/Header";
+import { Main } from "./main/Main";
+import { Footer } from "./footer/Footer";
+
+import { LightEffect } from "@/components/lightEffect/LightEffect";
+
+export function Home(){
+
     const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
 
     useEffect(() => {
@@ -35,17 +38,18 @@ export default function Home() {
         };
     }, []);
 
-    return (
+    return(
         <div className="relative">
-            {/* <div className="absolute top-4 left-4">
-                <img src={Logo} alt="logo" className="h-[45px]" />
-            </div> */}
             <LightEffect />
-            {/* <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute test"></div> */}
-            <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+            <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
                 <div className="lg:flex lg:justify-between lg:gap-4">
-                    <Header current={currentSectionId} />
-                    <Main />
+                    <Header 
+                        current={currentSectionId} 
+                    />
+                    <div className="lg:py-24 py-10 lg:w-2/3">
+                        <Main />
+                        <Footer />
+                    </div>
                 </div>
             </div>
         </div>

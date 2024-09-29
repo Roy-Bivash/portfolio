@@ -32,11 +32,10 @@ const socialMedia = {
 
 export function Header({ current } : HeaderProps) {
     return (
-        <header className="lg:h-screen lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 py-10">
+        <header className="lg:h-screen lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/3 lg:flex-col lg:justify-between lg:py-24 py-10">
             <div>
-                <h1 className="text-text text-4xl sm:text-6xl font-bold">Roy Bivash</h1>
-                <h3 className="text-text mt-3 text-xl">Full-Stack Engineer</h3>
-                <p className="text-textDescription mt-4 max-w-xs leading-normal">I build pixel-perfect, engaging, and accessible digital experiences.</p>
+                <h1 className="text-primary-text text-4xl sm:text-6xl font-bold">Roy Bivash</h1>
+                <h3 className="text-secondary-text mt-3 text-xl">Full-Stack Engineer</h3>
                 
                 <nav className='my-10 nav hidden lg:block'>
                     <ul className="">
@@ -54,7 +53,7 @@ export function Header({ current } : HeaderProps) {
             <ul className='mt-8 flex items-center gap-5'>
                 {socialMedia.github != "" && (
                     <li>
-                        <a href={socialMedia.github} target='_blank' className='transition-all block text-textDescription hover:text-slate-200'>
+                        <a href={socialMedia.github} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
                             <span className='sr-only'>GitHub</span>
                             <svg className="h-6 w-6" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                                 <g id="SVGRepo_iconCarrier">
@@ -72,7 +71,7 @@ export function Header({ current } : HeaderProps) {
                 )}
                 {socialMedia.linkedin != "" && (
                     <li>
-                        <a href={socialMedia.linkedin} target='_blank' className='transition-all block text-textDescription hover:text-slate-200'>
+                        <a href={socialMedia.linkedin} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
                             <span className='sr-only'>LinkedIn</span>
                             <svg className="h-6 w-6" fill="currentColor" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="-143 145 512 512">
                                 <g id="SVGRepo_iconCarrier"> 
@@ -84,7 +83,7 @@ export function Header({ current } : HeaderProps) {
                 )}
                 {socialMedia.email != "" && (
                     <li>
-                        <a href={`mailto:${socialMedia.email}`} target='_blank' className='transition-all block text-textDescription hover:text-slate-200'>
+                        <a href={`mailto:${socialMedia.email}`} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
                             <span className='sr-only'>Email</span>
                             <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="email" fill="currentColor"> 
