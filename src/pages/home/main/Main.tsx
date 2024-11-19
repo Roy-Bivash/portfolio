@@ -35,7 +35,7 @@ const experienceList:Array<Experience> = [
     {
         date: "May 2021",
         title: "Designed and implemented a web application facilitating rapid note sharing among office staff members.",
-        description: "Configured and managed a Rocky Linux server for PHP applications with PostgreSQL, developed server admin tools, and migrated applications from PHP 5 to PHP 8.",
+        description: "Designed and implemented a web application facilitating rapid note sharing among office staff members",
         tags: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
     },
 ];
