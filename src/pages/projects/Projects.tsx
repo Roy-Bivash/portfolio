@@ -15,6 +15,16 @@ interface ArchiveInterface {
 
 const archiveList:Array<ArchiveInterface> = [
     {
+        year: "2025",
+        project: "Pallery : Pallery is a Pinterest-style web application for hosting images",
+        tags: ["React", "TypeScript", "Express", "NodeJS", "Supabase", "TailwindCSS"],
+        link: {
+            display: "Github",
+            href: "https://github.com/Roy-Bivash/Pallery",
+            target: "_blank",
+        },
+    },
+    {
         year: "2024",
         project: "Pulsar : Run the Microsoft Phi models locally on your machine",
         tags: ["python", "Vue.js", "TypeScript", "CSS", "Docker"],

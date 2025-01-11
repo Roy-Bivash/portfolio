@@ -3,6 +3,7 @@ import { ProjectList, Project } from "@/components/project";
 import imgProject1 from "@/assets/img/projects/chat.png";
 import imgProject2 from "@/assets/img/projects/brightness.png";
 import imgProject3 from "@/assets/img/projects/aim-trainer.png";
+import imgProject4 from "@/assets/img/projects/pallery.png";
 
 interface Experience {
     date: string;
@@ -41,6 +42,14 @@ const experienceList:Array<Experience> = [
 ];
 
 const projectList:Array<Project> = [
+    {
+        img: imgProject4,
+        title: "Pallery",
+        href: "https://github.com/Roy-Bivash/Pallery",
+        description: "Pallery is a Pinterest-style web application for hosting images",
+        tags: ["React", "TypeScript", "Express", "NodeJS", "Supabase" ,"TailwindCSS"],
+        target: "_blank",
+    },
     {
         img: imgProject1,
         title: "Pulsar",
