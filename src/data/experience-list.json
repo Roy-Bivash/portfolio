@@ -1,0 +1,39 @@
+[
+    {
+        "date": "2023 - Present",
+        "title": "Full stack developer apprenticeship at Public Finance",
+        "description": "Designed, developed, presented, and maintained a Project Management Dashboard application in collaboration with a team.",
+        "tags": [
+            "Vue.js", 
+            "Java Spring", 
+            "Figma", 
+            "PostgreSQL", 
+            "TypeScript", 
+            "GitLab"
+        ]
+    },
+    {
+        "date": "2022 - 2023",
+        "title": "Full stack developer apprenticeship at Public Finance for 1 year",
+        "description": "Configured and managed a Rocky Linux server for PHP applications with PostgreSQL, developed server admin tools, and migrated applications from PHP 5 to PHP 8.",
+        "tags": [
+            "PHP", 
+            "PostgreSQL",
+            "JavaScript", 
+            "Tailwind CSS", 
+            "Git", 
+            "REST API"
+        ]
+    },
+    {
+        "date": "May 2021",
+        "title": "Designed and implemented a web application facilitating rapid note sharing among office staff members.",
+        "description": "Designed and implemented a web application facilitating rapid note sharing among office staff members",
+        "tags": [
+            "PHP",
+            "MySQL", 
+            "JavaScript", 
+            "Bootstrap"
+        ]
+    }
+]

@@ -1,5 +1,6 @@
 import './Header.css';
 import { ListItem } from './listItem/ListItem';
+import social_media from '@/data/social-media.json';
 
 interface HeaderProps{
     current:String | null;
@@ -24,12 +25,6 @@ const navLinks:Array<NavLinks> = [
     }
 ];
 
-const socialMedia = {
-    email:"bivash.roy.pro@outlook.com",
-    github: "https://github.com/Roy-Bivash",
-    linkedin: "https://www.linkedin.com/in/bivash-roy15",
-};
-
 export function Header({ current } : HeaderProps) {
     return (
         <header className="lg:h-screen lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/3 lg:flex-col lg:justify-between lg:py-24 py-10">
@@ -51,9 +46,9 @@ export function Header({ current } : HeaderProps) {
                 </nav>
             </div>
             <ul className='mt-8 flex items-center gap-5'>
-                {socialMedia.github != "" && (
+                {social_media.github != "" && (
                     <li>
-                        <a href={socialMedia.github} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
+                        <a href={social_media.github} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
                             <span className='sr-only'>GitHub</span>
                             <svg className="h-6 w-6" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                                 <g id="SVGRepo_iconCarrier">
@@ -69,9 +64,9 @@ export function Header({ current } : HeaderProps) {
                         </a>
                     </li>
                 )}
-                {socialMedia.linkedin != "" && (
+                {social_media.linkedin != "" && (
                     <li>
-                        <a href={socialMedia.linkedin} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
+                        <a href={social_media.linkedin} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
                             <span className='sr-only'>LinkedIn</span>
                             <svg className="h-6 w-6" fill="currentColor" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="-143 145 512 512">
                                 <g id="SVGRepo_iconCarrier"> 
@@ -81,9 +76,9 @@ export function Header({ current } : HeaderProps) {
                         </a>
                     </li>
                 )}
-                {socialMedia.email != "" && (
+                {social_media.email != "" && (
                     <li>
-                        <a href={`mailto:${socialMedia.email}`} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
+                        <a href={`mailto:${social_media.email}`} target='_blank' className='transition-all block text-secondary-text hover:text-primary-text'>
                             <span className='sr-only'>Email</span>
                             <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="email" fill="currentColor"> 

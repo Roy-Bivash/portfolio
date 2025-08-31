@@ -1,9 +1,25 @@
 import { Timeline, TimelineContent, TimelineDate, TimelineItem } from "@/components/timeline";
 import { ProjectList, Project } from "@/components/project";
-import imgProject1 from "@/assets/img/projects/chat.png";
-import imgProject2 from "@/assets/img/projects/brightness.png";
-import imgProject3 from "@/assets/img/projects/aim-trainer.png";
-import imgProject4 from "@/assets/img/projects/pallery.png";
+import experiences from '@/data/experience-list.json';
+import projects from "@/data/home-page-project-list.json";
+import aboutData from '@/data/about.json';
+import { Link } from "react-router-dom";
+
+type Link = {
+  href: string;
+  text: string;
+};
+
+type Content = {
+  text: string;
+  link?: Link;
+  afterText?: string;
+};
+
+type Paragraph = {
+  id: number;
+  content: Content[];
+};
 
 interface Experience {
     date: string;
@@ -11,70 +27,15 @@ interface Experience {
     description: string;
     tags: Array<string>;
 };
+
 interface Project {
-    img: any;
+    img: string;
     title: string;
     href: string;
     description: string;
     tags: Array<string>;
-    target: "_self" | "_blank";
+    target: string;
 }
-
-const experienceList:Array<Experience> = [
-    {
-        date: "2023 - Present",
-        title: "Full stack developer apprenticeship at Public Finance",
-        description: "Designed, developed, presented, and maintained a Project Management Dashboard application in collaboration with a team.",
-        tags: ["Vue.js", "Java Spring", "Figma", "PostgreSQL", "TypeScript", "GitLab"],
-    },
-    {
-        date: "2022 - 2023",
-        title: "Full stack developer apprenticeship at Public Finance for 1 year",
-        description: "Configured and managed a Rocky Linux server for PHP applications with PostgreSQL, developed server admin tools, and migrated applications from PHP 5 to PHP 8.",
-        tags: ["PHP", "PostgreSQL", "JavaScript", "Tailwind CSS", "Git", "REST API"],
-    },
-    {
-        date: "May 2021",
-        title: "Designed and implemented a web application facilitating rapid note sharing among office staff members.",
-        description: "Designed and implemented a web application facilitating rapid note sharing among office staff members",
-        tags: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
-    },
-];
-
-const projectList:Array<Project> = [
-    {
-        img: imgProject4,
-        title: "Pallery",
-        href: "https://github.com/Roy-Bivash/Pallery",
-        description: "Pallery is a Pinterest-style web application for hosting images",
-        tags: ["React", "TypeScript", "Express", "NodeJS", "Supabase" ,"TailwindCSS"],
-        target: "_blank",
-    },
-    {
-        img: imgProject1,
-        title: "Pulsar",
-        href: "https://github.com/Roy-Bivash/pulsar",
-        description: "Run the Microsoft Phi models locally on your machine",
-        tags: ["python", "Vue.js", "TypeScript", "CSS", "Docker", "Git"],
-        target: "_blank",
-    },
-    {
-        img: imgProject2,
-        title: "Brightness",
-        href: "https://github.com/Roy-Bivash/Brightness",
-        description: "Adjust the the brightness of individual monitors in linux.",
-        tags: ["Rust", "React", "Tauri", "Typescript", "Git"],
-        target: "_blank",
-    },
-    {
-        img: imgProject3,
-        title: "Aim Trainer",
-        href: "https://github.com/Roy-Bivash/aim-trainer",
-        description: "A simple aim trainer using the pixi.js library",
-        tags: ["HTML", "CSS", "JavaScript", "Pixi.js"],
-        target: "_blank",
-    }, 
-];
 
 export function Main(){
     return(
@@ -84,15 +45,25 @@ export function Main(){
                     <h2 className="text-sm font-bold uppercase tracking-widest text-primary-text lg:sr-only">About</h2>
                 </div>
                 <div className="space-y-5 leading-relaxed tracking-wide">
-                    <p className="text-secondary-text">
-                        Back in 2020, I decided to dive into coding by creating small <a href="#projects" className="text-primary-text hover:underline">projects</a> and exploring the world of programming. What started as a curiosity quickly turned into a passion. 
-                        <br />After completing a two-year technical degree in IT, where I sharpened my skills, I'm now pursuing a Computer Engineering degree at <a href="https://www.cnam.fr/" target="_blank" className="text-primary-text hover:underline">CNAM University.</a>
-                    </p>
-                    <p className="text-secondary-text">
-                        These days, my focus is on becoming a better developer and deepening my expertise in full-stack development. 
-                        <br />
-                        I'm constantly seeking opportunities to grow, with the long-term goal of moving into a leadership role where I can manage and guide teams toward building innovative solutions.
-                    </p>
+                    {aboutData.map((el: Paragraph) => (
+                        <p key={el.id} className="text-secondary-text">
+                            {el.content.map((chunk, i) => (
+                                <span key={i}>
+                                    {chunk.text}
+                                    {chunk.link && (
+                                        <a
+                                            href={chunk.link.href}
+                                            target={chunk.link.href.startsWith('http') ? '_blank' : undefined}
+                                            className="text-primary-text hover:underline"
+                                        >
+                                            {chunk.link.text}
+                                        </a>
+                                    )}
+                                    {chunk.afterText && chunk.afterText}
+                                </span>
+                            ))}
+                        </p>
+                    ))}
                 </div>
             </section>
             <section id="experience" className="pt-10">
@@ -100,7 +71,7 @@ export function Main(){
                     <h2 className="text-sm font-bold uppercase tracking-widest text-primary-text lg:sr-only">Experience</h2>
                 </div>
                 <Timeline>
-                    {experienceList.map((el, i) => (
+                    {experiences.map((el: Experience, i) => (
                         <TimelineItem key={i}>
                             <TimelineDate
                                 date={el.date}
@@ -130,7 +101,7 @@ export function Main(){
                     <h2 className="text-sm font-bold uppercase tracking-widest text-primary-text lg:sr-only">Projects</h2>
                 </div>
                 <ProjectList>
-                    {projectList.map((el, i) => (
+                    {projects.map((el: Project, i) => (
                         <Project 
                             key={i}
                             img={el.img}
@@ -143,14 +114,14 @@ export function Main(){
                     ))}
                 </ProjectList>
                 <div className="mt-6 lg:flex lg:justify-end">
-                    <a href="./projects" target="_self" className="transition w-fit group text-primary-text font-normal tracking-wide hover:text-accent-text flex items-center gap-1">
+                    <Link to="./projects" target="_self" className="transition w-fit group text-primary-text font-normal tracking-wide hover:text-accent-text flex items-center gap-1">
                         <span>Project list</span>
                         <svg className="transition h-4 w-4 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_iconCarrier"> 
                                 <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> 
                             </g>
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </section>
         </main>

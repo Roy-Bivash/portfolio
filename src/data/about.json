@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "content": [
+      {
+        "text": "Back in 2020, I decided to dive into coding by creating small ",
+        "link": {
+          "href": "#projects",
+          "text": "projects"
+        },
+        "afterText": " and exploring the world of programming. What started as a curiosity quickly turned into a passion."
+      },
+      {
+        "text": "After completing a two-year technical degree in IT, where I sharpened my skills, I'm now pursuing a Computer Engineering degree at ",
+        "link": {
+          "href": "https://www.cnam.fr/",
+          "text": "CNAM University"
+        },
+        "afterText": "."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "content": [
+      {
+        "text": "These days, my focus is on becoming a better developer and deepening my expertise in full-stack development."
+      },
+      {
+        "text": "I'm constantly seeking opportunities to grow, with the long-term goal of moving into a leadership role where I can manage and guide teams toward building innovative solutions."
+      }
+    ]
+  }
+]

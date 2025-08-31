@@ -1,0 +1,82 @@
+ [
+    {
+        "year": "2025",
+        "project": "Pallery : Pallery is a Pinterest-style web application for hosting images",
+        "tags": ["React", "TypeScript", "Express", "NodeJS", "Supabase", "TailwindCSS"],
+        "link": {
+            "display": "Github",
+            "href": "https://github.com/Roy-Bivash/Pallery",
+            "target": "_blank"
+        }
+    },
+    {
+        "year": "2024",
+        "project": "Pulsar : Run the Microsoft Phi models locally on your machine",
+        "tags": ["python", "Vue.js", "TypeScript", "CSS", "Docker"],
+        "link": {
+            "display": "Github",
+            "href": "https://github.com/Roy-Bivash/pulsar",
+            "target": "_blank"
+        }
+    },
+    {
+        "year": "2024",
+        "project": "Brightness : Adjust the the brightness in linux.",
+        "tags": ["Rust", "React", "Tauri", "Typescript"],
+        "link": {
+            "display": "Github",
+            "href": "https://github.com/Roy-Bivash/Brightness",
+            "target": "_blank"
+        }
+    },
+    {
+        "year": "2024",
+        "project": "Rent A Bike : School project",
+        "tags": ["React", "NestJS", "MySQL"],
+        "link": {
+            "display": "Github",
+            "href": "https://github.com/Roy-Bivash/rentabike",
+            "target": "_blank"
+        }
+    },
+    {
+        "year": "2023",
+        "project": "Aim Trainer",
+        "tags": ["HTML", "CSS", "JavaScript", "Pixi.js"],
+        "link": {
+            "display": "Github",
+            "href": "https://github.com/Roy-Bivash/aim-trainer",
+            "target": "_blank"
+        }
+    },
+    {
+        "year": "2023",
+        "project": "TIC TAC TOE",
+        "tags": ["JavaScript"],
+        "link": {
+            "display": "TIC TAC TOE",
+            "href": "http://projects.rbivash.com/js-morpion/",
+            "target": "_blank"
+        }
+    },
+    {
+        "year": "2022",
+        "project": "Windows Dashboard",
+        "tags": ["C#", ".NET Framework"]
+    },
+    {
+        "year": "2021",
+        "project": "Billing application",
+        "tags": ["PHP", "MySQL", "Bootstrap", "Javascript"]
+    },
+    {
+        "year": "2021",
+        "project": "NASA Rover Images",
+        "tags": ["NASA API", "JavaScript", "Bootstrap"],
+        "link": {
+            "display": "NASA Image",
+            "href": "http://projects.rbivash.com/nasa2/",
+            "target": "_blank"
+        }
+    }
+]

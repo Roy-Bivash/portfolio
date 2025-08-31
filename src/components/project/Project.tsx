@@ -6,7 +6,7 @@ interface ProjectProps {
     href: string;
     description: string;
     tags: Array<string>;
-    target: "_self" | "_blank";
+    target: string;
 }
 
 export function Project({ title, href, description, tags, target, img }:ProjectProps){

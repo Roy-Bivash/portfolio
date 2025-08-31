@@ -1,10 +1,11 @@
 import { Tag } from "@/components/tag/Tag";
 import { LightEffect } from "@/components/lightEffect/LightEffect";
-
+import { Link } from "react-router-dom";
+import projects from "@/data/projects-page-project-list.json";
 interface Link {
     display: string;
     href:string;
-    target: "_self" | "_blank";
+    target: string;
 }
 interface ArchiveInterface {
     year: string;
@@ -13,88 +14,7 @@ interface ArchiveInterface {
     link?: Link;
 }
 
-const archiveList:Array<ArchiveInterface> = [
-    {
-        year: "2025",
-        project: "Pallery : Pallery is a Pinterest-style web application for hosting images",
-        tags: ["React", "TypeScript", "Express", "NodeJS", "Supabase", "TailwindCSS"],
-        link: {
-            display: "Github",
-            href: "https://github.com/Roy-Bivash/Pallery",
-            target: "_blank",
-        },
-    },
-    {
-        year: "2024",
-        project: "Pulsar : Run the Microsoft Phi models locally on your machine",
-        tags: ["python", "Vue.js", "TypeScript", "CSS", "Docker"],
-        link: {
-            display: "Github",
-            href: "https://github.com/Roy-Bivash/pulsar",
-            target: "_blank",
-        },
-    },
-    {
-        year: "2024",
-        project: "Brightness : Adjust the the brightness in linux.",
-        tags: ["Rust", "React", "Tauri", "Typescript"],
-        link: {
-            display: "Github",
-            href: "https://github.com/Roy-Bivash/Brightness",
-            target: "_blank",
-        },
-    },
-    {
-        year: "2024",
-        project: "Rent A Bike : School project",
-        tags: ["React", "NestJS", "MySQL"],
-        link: {
-            display: "Github",
-            href: "https://github.com/Roy-Bivash/rentabike",
-            target: "_blank",
-        },
-    },
-    {
-        year: "2023",
-        project: "Aim Trainer",
-        tags: ["HTML", "CSS", "JavaScript", "Pixi.js"],
-        link: {
-            display: "Github",
-            href: "https://github.com/Roy-Bivash/aim-trainer",
-            target: "_blank",
-        },
-    },
-    {
-        year: "2023",
-        project: "TIC TAC TOE",
-        tags: ["JavaScript"],
-        link: {
-            display: "TIC TAC TOE",
-            href: "http://projects.rbivash.com/js-morpion/",
-            target: "_blank"
-        }
-    },
-    {
-        year: "2022",
-        project: "Windows Dashboard",
-        tags: ["C#", ".NET Framework"],
-    },
-    {
-        year: "2021",
-        project: "Billing application",
-        tags: ["PHP", "MySQL", "Bootstrap", "Javascript"],
-    },
-    {
-        year: "2021",
-        project: "NASA Rover Images",
-        tags: ["NASA API", "JavaScript", "Bootstrap"],
-        link: {
-            display: "NASA Image",
-            href: "http://projects.rbivash.com/nasa2/",
-            target: "_blank"
-        }
-    },
-];
+const ARCHIVE_LIST:ArchiveInterface[] = projects;
 
 export function Projects(){
     return(
@@ -102,14 +22,14 @@ export function Projects(){
             <LightEffect />
             <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-10">
                 <div className="mt-6 mb-2">
-                    <a href="/" className="transition group font-normal tracking-wide text-accent-text flex items-center gap-1">
+                    <Link to="/" target="_self" className="transition group font-normal tracking-wide text-accent-text flex items-center gap-1">
                         <svg className="transition h-4 w-4 group-hover:-translate-x-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_iconCarrier">
                                 <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> 
                             </g>
                         </svg>
                         <span>ROY BIvash</span>
-                    </a>
+                    </Link>
                 </div>
                 <h1 className="text-primary-text text-4xl sm:text-5xl font-bold tracking-wide">Projects</h1>
                 <table className="mt-12 w-full border-collapse text-left">
@@ -122,7 +42,7 @@ export function Projects(){
                         </tr>
                     </thead>
                     <tbody>
-                    {archiveList.map((el, i) => (
+                    {ARCHIVE_LIST.map((el, i) => (
                             <tr key={i} className="border-b border-secondary-background">
                                 <td className="text-secondary-text">
                                     {el.year}

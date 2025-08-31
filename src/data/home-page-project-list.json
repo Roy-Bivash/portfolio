@@ -1,0 +1,34 @@
+[
+    {
+        "img": "/images/pallery.png",
+        "title": "Pallery",
+        "href": "https://github.com/Roy-Bivash/Pallery",
+        "description": "Pallery is a Pinterest-style web application for hosting images",
+        "tags": ["React", "TypeScript", "Express", "NodeJS", "Supabase" ,"TailwindCSS"],
+        "target": "_blank"
+    },
+    {
+        "img": "/images/chat.png",
+        "title": "Pulsar",
+        "href": "https://github.com/Roy-Bivash/pulsar",
+        "description": "Run the Microsoft Phi models locally on your machine",
+        "tags": ["python", "Vue.js", "TypeScript", "CSS", "Docker", "Git"],
+        "target": "_blank"
+    },
+    {
+        "img": "/images/brightness.png",
+        "title": "Brightness",
+        "href": "https://github.com/Roy-Bivash/Brightness",
+        "description": "Adjust the the brightness of individual monitors in linux.",
+        "tags": ["Rust", "React", "Tauri", "Typescript", "Git"],
+        "target": "_blank"
+    },
+    {
+        "img": "/images/aim-trainer.png",
+        "title": "Aim Trainer",
+        "href": "https://github.com/Roy-Bivash/aim-trainer",
+        "description": "A simple aim trainer using the pixi.js library",
+        "tags": ["HTML", "CSS", "JavaScript", "Pixi.js"],
+        "target": "_blank"
+    }
+]
