@@ -24,6 +24,7 @@ type Paragraph = {
 interface Experience {
     date: string;
     title: string;
+    secondary_title: string;
     description: string;
     tags: Array<string>;
 };
@@ -78,6 +79,7 @@ export function Main(){
                             />
                             <TimelineContent
                                 title={el.title}
+                                secondary_title={el.secondary_title}
                                 description={el.description}
                                 tags={el.tags}
                             />

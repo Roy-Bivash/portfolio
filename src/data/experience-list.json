@@ -1,33 +1,60 @@
-[
+[   
     {
-        "date": "2023 - Present",
-        "title": "Full stack developer apprenticeship at Public Finance",
-        "description": "Designed, developed, presented, and maintained a Project Management Dashboard application in collaboration with a team.",
+        "date": "2024 - Present",
+        "title": "Apprentice Full-Stack Developer on National Public Service Application",
+        "secondary_title": "Apprentice Full-Stack Developer at Public Finances Directorate General (DGFIP)",
+        "description": "Contributed to the redevelopment of a nationwide application for intern and academic records, collaborating with cross-functional teams in an agile environment to deliver new features and resolve bugs while leveraging DevOps principles.",
         "tags": [
-            "Vue.js", 
-            "Java Spring", 
-            "Figma", 
-            "PostgreSQL", 
-            "TypeScript", 
-            "GitLab"
+            "Java",
+            "Spring",
+            "Vue.js",
+            "TypeScript",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "PostgreSQL",
+            "Confluence",
+            "Git",
+            "Jira"
+        ]
+    },
+    {
+        "date": "2023 - 2024",
+        "title": "Apprentice Full-Stack Developer : Project Management Dashboard",
+        "secondary_title": "Apprentice Full-Stack Developer at Public Finances Directorate General (DGFIP)",
+        "description": "Designed and implemented a Project Management Dashboard Application with strong UX/UI focus. Collaborated with a cross-functional team to deliver new features, presented updates to managers, improving adoption and visibility of project progress.",
+        "tags": [
+            "PHP",
+            "Vue.js",
+            "TypeScript",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "PostgreSQL",
+            "Rocky Linux",
+            "Git",
+            "Tailwind"
         ]
     },
     {
         "date": "2022 - 2023",
-        "title": "Full stack developer apprenticeship at Public Finance for 1 year",
-        "description": "Configured and managed a Rocky Linux server for PHP applications with PostgreSQL, developed server admin tools, and migrated applications from PHP 5 to PHP 8.",
+        "title": "Apprentice Full-Stack Developer : Server & Legacy Application Migration",
+        "secondary_title": "Apprentice Full-Stack Developer at Public Finances Directorate General (DGFIP)",
+        "description": "Configured and maintained a Rocky Linux server hosting PHP applications with PostgreSQL. Developed internal tools for server administration and led the migration of legacy applications from PHP 5 to PHP 8, modernizing infrastructure and extending software lifecycle.",
         "tags": [
-            "PHP", 
+            "PHP",
+            "JavaScript",
+            "HTML",
+            "CSS",
             "PostgreSQL",
-            "JavaScript", 
-            "Tailwind CSS", 
-            "Git", 
-            "REST API"
+            "Rocky Linux",
+            "Git"
         ]
     },
     {
         "date": "May 2021",
-        "title": "Designed and implemented a web application facilitating rapid note sharing among office staff members.",
+        "title": "Internship : Designed and implemented a web application facilitating rapid note sharing among office staff members.",
+        "secondary_title": "",
         "description": "Designed and implemented a web application facilitating rapid note sharing among office staff members",
         "tags": [
             "PHP",
