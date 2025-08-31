@@ -25,9 +25,9 @@ The design of this portfolio was inspired by [Brittany Chiang's portfolio](https
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
+### Requirements
 
-Make sure you have Node.js and npm installed. You can download them [here](https://nodejs.org/).
+Make sure you have Node.js and npm installed. You can download it [here](https://nodejs.org/).
 
 ### Installation
 
