@@ -7,7 +7,6 @@ import { Footer } from "./footer/Footer";
 import { LightEffect } from "@/components/lightEffect/LightEffect";
 
 export function Home(){
-
     const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
 
     useEffect(() => {
@@ -21,7 +20,7 @@ export function Home(){
                 });
             },
             {
-                threshold: 1,
+                threshold: 0.5,
             }
         );
 
