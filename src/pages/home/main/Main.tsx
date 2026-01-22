@@ -32,7 +32,7 @@ interface Experience {
 interface Project {
     img: string;
     title: string;
-    href: string;
+    href?: string;
     description: string;
     tags: Array<string>;
     target: string;

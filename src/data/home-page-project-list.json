@@ -1,5 +1,20 @@
 [
     {
+        "img": "/images/fip-game.png",
+        "title": "FIP Game",
+        "description": "An online medieval combat game accessible via web browser - Project in developpement",
+        "tags": ["React", "TypeScript", "TailwindCSS", "NestJS", "PostgreSQL", "Redis", "Docker", "OAuth", "WebSocket", "NodeJS"],
+        "target": "_blank"
+    },
+    {
+        "img": "/images/game-of-life.png",
+        "title": "Game of life",
+        "href": "https://github.com/Roy-Bivash/game-of-life",
+        "description": "The Game of Life, also known as Conway's Game of Life or simply Life, is a cellular automaton",
+        "tags": ["React", "TypeScript", "Phaser JS", "CSS"],
+        "target": "_blank"
+    },
+    {
         "img": "/images/pallery.png",
         "title": "Pallery",
         "href": "https://github.com/Roy-Bivash/Pallery",

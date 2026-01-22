@@ -1,4 +1,34 @@
- [
+[
+    {
+        "year": "2025 - Ongoing",
+        "project": "FIP Game: An online medieval combat game accessible via web browser - Project in developpement",
+        "tags": ["React", "TypeScript", "TailwindCSS", "NestJS", "PostgreSQL", "Redis", "Docker", "OAuth", "WebSocket", "NodeJS"]
+    },
+    {
+        "year": "2025",
+        "project": "Online Mobile Game - IOS and Android",
+        "tags": ["React Native", "Nativewind", "NestJS", "PostgreSQL", "Redis", "MiniO", "Docker", "OAuth", "WebSocket", "NodeJS"]
+    },
+    {
+        "year": "2025",
+        "project": "WOT Track : Automated monitoring bot for World of Tanks clans that sends Discord notifications when new members join",
+        "tags": ["Python", "Discord", "Webhooks", "Bot"],
+        "link": {
+            "display": "Github",
+            "href": "https://github.com/Roy-Bivash/wot-track",
+            "target": "_blank"
+        }
+    },
+    {
+        "year": "2025",
+        "project": "Game of Life : also known as Conway's Game of Life or simply Life, is a cellular automaton",
+        "tags": ["React", "TypeScript", "Phaser JS", "CSS"],
+        "link": {
+            "display": "Github",
+            "href": "https://github.com/Roy-Bivash/game-of-life",
+            "target": "_blank"
+        }
+    },
     {
         "year": "2025",
         "project": "Pallery : Pallery is a Pinterest-style web application for hosting images",

@@ -47,7 +47,7 @@ export function Projects(){
                                 <td className="text-secondary-text">
                                     {el.year}
                                 </td>
-                                <td className="py-4 pr-4 align-top font-normal leading-snug text-primary-text">
+                                <td className="py-4 pr-4 align-middle font-normal leading-snug text-primary-text">
                                     <span className="hidden md:block">{el.project}</span>
                                     <div className="md:hidden">
                                         <a href={el.link?.href} target={el.link?.target} className="flex items-end gap-1">
@@ -67,7 +67,7 @@ export function Projects(){
                                     </div>
                                 </td>
                                 <td className="hidden lg:table-cell">
-                                    <ul className="flex gap-2 -translate-y-1.5 flex-wrap">
+                                    <ul className="flex gap-2 flex-wrap pt-4 pb-1.5">
                                         {el.tags.map((theTag, i) => (
                                             <Tag key={i} name={theTag} />
                                         ))}
